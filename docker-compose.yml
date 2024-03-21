@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  elasticsearch:
+    build: .
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      # - es_logs:/usr/share/elasticsearch/logs
+
+volumes:
+  es_data:
+  # es_logs:
